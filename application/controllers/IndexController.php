@@ -2,13 +2,9 @@
 class IndexController implements IController {
 	public function indexAction() {
 		$fc = FrontController::getInstance();
-		/* Èíèöèàëèçàöèÿ ìîäåëè */
+		/* Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð¼Ð¾Ð´ÐµÐ»Ð¸ */
 		$model = new FileModel();
-		/* 
-		*	$model->name = $params['name'];
-		*/
-		$model->name = "Guest";
-		
+		$model->name = "Ð“Ð¾ÑÑ‚ÑŒ";
 		$output = $model->render(USER_DEFAULT_FILE);
 		
 		$fc->setBody($output);
